@@ -13,6 +13,7 @@
 #include <pthread.h>
 #include <sys/time.h>
 
+__BEGIN_DECLS
 
 typedef struct condition {
     pthread_mutex_t p_mutex;
@@ -30,5 +31,7 @@ int condition_timedwait(condition_t*, const struct timespec *); // wait for a co
 
 int cond_signal(condition_t*); // send signal to a waiting thread
 int cond_broadcast(condition_t*); // send signal to all waiting thread
+
+__END_DECLS
 
 #endif /* condition_h */

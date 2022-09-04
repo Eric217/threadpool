@@ -13,6 +13,8 @@
 
 #include "condition.h"
 
+__BEGIN_DECLS
+
 typedef void* (*func) (void*);
 typedef void* args;
 
@@ -41,6 +43,6 @@ void thread_pool_destroy(thread_pool_t *);
 
 void thread_pool_add_task(thread_pool_t *, func function, void* args);
 
-
+__END_DECLS
  
 #endif /* pool_h */
